@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">My Gallery</string>
+    <string name="gambar">Gambar %1$s</string>
+    <string name="error">Gagal memuat data... Koneksi error.</string>
+    <string name="try_again">Coba lagi</string>
+    <string name="profil">Profil</string>
+    <string name="tutup">Tutup</string>
+    <string name="logout">Logout</string>
+    <string name="tambah_foto">Tambah foto</string>
+    <string name="nama">Nama</string>
+    <string name="nama_latin">Details</string>
+    <string name="batal">Batal</string>
+    <string name="simpan">Simpan</string>
+    <string name="hapus">Hapus</string>
+    <string name="hapus_item">Hapus Item?</string>
+    <string name="konfirmasi">Apakah anda yakin ingin menghapus %1s?</string>
+
+    <string name="judul">Judul</string>
+    <string name="deskripsi">Deskripsi</string>
+    <string name="perbarui">Perbarui</string>
+    <string name="edit">Edit</string>
+</resources>
