@@ -25,6 +25,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Delete
@@ -49,6 +50,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
@@ -173,7 +175,7 @@ fun MainScreen() {
             }) {
                 Icon(
                     imageVector = Icons.Default.Add,
-                    contentDescription = stringResource(id = R.string.tambah_hewan)
+                    contentDescription = stringResource(id = R.string.tambah_foto)
                 )
             }
         }
@@ -403,11 +405,11 @@ fun ListItem(
     onDeleteClick: (() -> Unit)? = null,
     onEditClick: (() -> Unit)? = null
 ) {
-    Box(
+    Column(
         modifier = Modifier
             .padding(4.dp)
-            .border(1.dp, Color.Gray),
-        contentAlignment = Alignment.BottomCenter
+            .clip(RoundedCornerShape(topStart = 12.dp, topEnd = 12.dp)),
+        horizontalAlignment = Alignment.CenterHorizontally
     ) {
         AsyncImage(
             model = ImageRequest.Builder(LocalContext.current)
@@ -421,8 +423,8 @@ fun ListItem(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(4.dp)
+                .clip(RoundedCornerShape(topStart = 12.dp, topEnd = 12.dp))
         )
-
         Box(
             modifier = Modifier
                 .fillMaxWidth()
@@ -471,7 +473,7 @@ fun ListItem(
                             Icon(
                                 imageVector = Icons.Default.Delete,
                                 contentDescription = stringResource(R.string.hapus),
-                                tint = Color.White,
+                                tint = Color(0xFFE57373),
                                 modifier = Modifier.size(20.dp)
                             )
                         }
@@ -479,7 +481,9 @@ fun ListItem(
                 }
             }
         }
+
     }
+
 }
 
 
